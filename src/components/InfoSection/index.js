@@ -83,6 +83,7 @@ const InfoSection = ({
                   <Img src={img4} alt="CSS3" />
                 </ImgWrapGrid>
               )}
+              {multiImg === undefined && <div>Form will be here</div>}
             </Column2>
           </InfoRow>
         </InfoWrapper>
