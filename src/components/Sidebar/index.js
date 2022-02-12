@@ -20,7 +20,6 @@ const Sidebar = ({ isOpen, toggle }) => {
         <SidebarMenu>
           <SidebarLink to="about">About</SidebarLink>
           <SidebarLink to="experience">Experience</SidebarLink>
-          <SidebarLink to="recognitions">Recognitions</SidebarLink>
           <SidebarLink to="contact">Contact Me</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
