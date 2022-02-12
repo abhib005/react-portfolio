@@ -45,7 +45,6 @@ export const homeObjeTwo = {
   img2: reSvg,
   img3: htmlSvg,
   img4: cssSvg,
-  alt: "Web Developer",
   dark: true,
   primary: true,
   darkText: true,

@@ -77,10 +77,10 @@ const InfoSection = ({
               )}
               {multiImg === true && (
                 <ImgWrapGrid>
-                  <Img src={img1} alt={alt} />
-                  <Img src={img2} alt={alt} />
-                  <Img src={img3} alt={alt} />
-                  <Img src={img4} alt={alt} />
+                  <Img src={img1} alt="JavaScript" />
+                  <Img src={img2} alt="React" />
+                  <Img src={img3} alt="HTML5" />
+                  <Img src={img4} alt="CSS3" />
                 </ImgWrapGrid>
               )}
             </Column2>
