@@ -13,6 +13,8 @@ import {
   NavBtn,
   NavBtnLink,
 } from "./NavbarElements";
+import Resume from "../../../src/Resume.pdf";
+
 export const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
 
@@ -63,7 +65,9 @@ export const Navbar = ({ toggle }) => {
               ))}
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="/download">Download Resume</NavBtnLink>
+              <NavBtnLink href={Resume} download="Resume-Abhishek-Bhatia">
+                Download Resume
+              </NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

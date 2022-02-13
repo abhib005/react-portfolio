@@ -9,6 +9,7 @@ import {
   SideBtnWrap,
   SidebarRoute,
 } from "./SidebarElements";
+import Resume from "../../../src/Resume.pdf";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -29,7 +30,9 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/download">Download Resume</SidebarRoute>
+          <SidebarRoute href={Resume} download="Resume-Abhishek-Bhatia">
+            Download Resume
+          </SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
