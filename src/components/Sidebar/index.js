@@ -18,9 +18,15 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about">About</SidebarLink>
-          <SidebarLink to="experience">Experience</SidebarLink>
-          <SidebarLink to="contact">Contact Me</SidebarLink>
+          <SidebarLink to="about" onClick={toggle}>
+            About
+          </SidebarLink>
+          <SidebarLink to="experience" onClick={toggle}>
+            Experience
+          </SidebarLink>
+          <SidebarLink to="contact" onClick={toggle}>
+            Contact Me
+          </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarRoute to="/download">Download Resume</SidebarRoute>
