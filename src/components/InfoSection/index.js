@@ -1,4 +1,5 @@
 import React from "react";
+import ContactForm from "../ContactForm";
 import {
   InfoContainer,
   InfoWrapper,
@@ -83,7 +84,7 @@ const InfoSection = ({
                   <Img src={img4} alt="CSS3" />
                 </ImgWrapGrid>
               )}
-              {multiImg === undefined && <div>Form will be here</div>}
+              {multiImg === undefined && <ContactForm></ContactForm>}
             </Column2>
           </InfoRow>
         </InfoWrapper>

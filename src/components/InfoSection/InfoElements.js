@@ -6,6 +6,7 @@ export const InfoContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
+   overflow: scroll;
   }
 `;
 
@@ -114,6 +115,9 @@ export const ImgWrapGrid = styled.div`
   justify-content: center;
   align-items: center;
   grid-template-columns: 150px 150px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 50px 50px;
+  }
   grid-row: auto auto;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
