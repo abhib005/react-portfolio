@@ -88,6 +88,7 @@ export const StyledSuccess = styled.div`
 
 export const initalState = {
   name: "",
+  country: "",
   email: "",
   message: "",
 };
