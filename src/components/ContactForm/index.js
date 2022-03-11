@@ -67,6 +67,7 @@ const ContactForm = () => {
     setError("");
     const formdata = {
       name: state.name,
+      country: state.country,
       email: state.email,
       msg: state.message,
     };
@@ -74,9 +75,15 @@ const ContactForm = () => {
   };
 
   const handleInput = (e) => {
+    if (e.type === "blur"){
+      const value = e.target.value;
+      setState((prev) => ({ ...prev, "country": value }));
+    }
+    else{
     const inputName = e.currentTarget.name;
     const value = e.currentTarget.value;
     setState((prev) => ({ ...prev, [inputName]: value }));
+    }
   };
 
   useEffect(() => {
@@ -140,6 +147,7 @@ const ContactForm = () => {
               name="country"
               labelKey="name"
               onChange={setSelected}
+              onBlur={handleInput}
               options={countries}
               selected={selected}
             />
