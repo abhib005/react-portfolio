@@ -15,6 +15,9 @@ import {
   HeadingLink,
   ImgWrapGrid,
 } from "./InfoElements";
+import { FaLinkedin } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+
 const InfoSection = ({
   id,
   lightBg,
@@ -33,6 +36,7 @@ const InfoSection = ({
   img4,
   alt,
   darkText,
+  socioinfo
 }) => {
   return (
     <>
@@ -65,6 +69,29 @@ const InfoSection = ({
                       <span style={{ color: "#01bf71" }}>
                         JavaScript, React, HTML5 and CSS.
                       </span>
+                    </Subtitle>
+                  </>
+                )}
+                {socioinfo != null && (
+                  <>
+                    <br />
+                    <Subtitle darkText={darkText}>
+                      {socioinfo}
+                      <a
+                      href="mailto:abhi.bhatia005@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{color: '#FFFFFF'}}>
+                      <MdOutlineEmail />
+                      </a>
+                      &nbsp;
+                      <a
+                      href="https://www.linkedin.com/in/abhishekbhatia005/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{color: '#0072b1'}}>
+                      <FaLinkedin />
+                      </a>
                     </Subtitle>
                   </>
                 )}

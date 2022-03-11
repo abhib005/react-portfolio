@@ -32,7 +32,6 @@ export const StyledInput = styled.input`
 `;
 
 export const StyledTextArea = styled.textarea`
-  background-color: #eee;
   width: 100%;
   min-height: 100px;
   resize: none;
