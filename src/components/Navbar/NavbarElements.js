@@ -44,14 +44,15 @@ export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
     color: #fff;
+  justify-self: flex-start;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  font-weight: bold;
+  text-decoration: none;
   }
 `;
 
@@ -61,7 +62,8 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   margin-right: -22px;
-
+  margin-bottom: 0;
+  
   @media screen and (max-width: 768px) {
     display: none;
   }
