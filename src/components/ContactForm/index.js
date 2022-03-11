@@ -22,6 +22,7 @@ const ContactForm = () => {
   const [countries, setCountries] = useState([]);
   const [selected, setSelected] = useState([]);
   const txtRefN = useRef();
+  const txtRefC = useRef();
   const txtRefE = useRef();
   const txtRef = useRef();
 
@@ -48,6 +49,7 @@ const ContactForm = () => {
         txtRefN.current.value = "";
         txtRefE.current.value = "";
         txtRef.current.value = "";
+        txtRefC.current.clear()
         console.log(responseJson);
       })
       .catch((error) => {
@@ -150,6 +152,7 @@ const ContactForm = () => {
               onBlur={handleInput}
               options={countries}
               selected={selected}
+              ref={txtRefC}
             />
           </Form.Group>
           <label htmlFor="email">Email</label>
