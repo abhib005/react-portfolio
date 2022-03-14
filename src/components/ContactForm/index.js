@@ -143,13 +143,6 @@ const ContactForm = () => {
 
   return (
     <>
-      <form name="contactfrm" netlify netlify-honeypot="bot-field" hidden>
-        <input type="text" name="name" />
-        <input type="text" name="country" />
-        <input type="email" name="email" />
-        <input type="textarea" name="message" />
-        <textarea name="message"></textarea>
-      </form>
       <StyledFormWrapper>
         <StyledForm
           data-netlify="true"
