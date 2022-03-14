@@ -145,11 +145,10 @@ const ContactForm = () => {
     <>
       <StyledFormWrapper>
         <StyledForm
-          data-netlify="true"
           name="contactfrm"
-          id="contactform"
           onSubmit={handleSubmit}
         >
+          <input type="hidden" name="form-name" value="contactfrm" />
           <h2>Contact Form</h2>
           {success && (
             <StyledSuccess>
