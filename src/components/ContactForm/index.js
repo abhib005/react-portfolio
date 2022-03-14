@@ -67,13 +67,33 @@ const ContactForm = () => {
       }
     }
     setError("");
-    const formdata = {
-      name: state.name,
-      country: state.country,
-      email: state.email,
-      msg: state.message,
-    };
-    postFormData(formdata);
+    e.preventDefault();
+    let myForm = document.getElementById("contactform");
+    let formData = new FormData(myForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then((response) => {
+        if (response.ok) {
+          setSuccess("Thanks for contacting! Will reach out to you shortly.");
+          txtRefN.current.value = "";
+          txtRefE.current.value = "";
+          txtRef.current.value = "";
+          txtRefC.current.clear();
+        } else {
+          throw new Error("Something went wrong");
+        }
+      })
+      .catch((error) => alert(error));
+    // const formdata = {
+    //   name: state.name,
+    //   country: state.country,
+    //   email: state.email,
+    //   msg: state.message,
+    // };
+    // postFormData(formdata);
   };
 
   const handleInput = (e) => {
@@ -124,7 +144,7 @@ const ContactForm = () => {
   return (
     <>
       <StyledFormWrapper>
-        <StyledForm onSubmit={handleSubmit}>
+        <StyledForm data-netlify="true" name="contactfrm" id="contactform" onSubmit={handleSubmit}>
           <h2>Contact Form</h2>
           {success && (
             <StyledSuccess>
