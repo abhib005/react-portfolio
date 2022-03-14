@@ -97,14 +97,13 @@ const ContactForm = () => {
   };
 
   const handleInput = (e) => {
-    if (e.type === "blur"){
+    if (e.type === "blur") {
       const value = e.target.value;
-      setState((prev) => ({ ...prev, "country": value }));
-    }
-    else{
-    const inputName = e.currentTarget.name;
-    const value = e.currentTarget.value;
-    setState((prev) => ({ ...prev, [inputName]: value }));
+      setState((prev) => ({ ...prev, country: value }));
+    } else {
+      const inputName = e.currentTarget.name;
+      const value = e.currentTarget.value;
+      setState((prev) => ({ ...prev, [inputName]: value }));
     }
   };
 
@@ -144,10 +143,7 @@ const ContactForm = () => {
   return (
     <>
       <StyledFormWrapper>
-        <StyledForm
-          name="contactfrm"
-          onSubmit={handleSubmit}
-        >
+        <StyledForm id="contactform" name="contactfrm" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contactfrm" />
           <h2>Contact Form</h2>
           {success && (
