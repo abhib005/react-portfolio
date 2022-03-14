@@ -143,8 +143,20 @@ const ContactForm = () => {
 
   return (
     <>
+      <form name="contactfrm" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="text" name="country" />
+        <input type="email" name="email" />
+        <input type="textarea" name="message" />
+        <textarea name="message"></textarea>
+      </form>
       <StyledFormWrapper>
-        <StyledForm data-netlify="true" name="contactfrm" id="contactform" onSubmit={handleSubmit}>
+        <StyledForm
+          data-netlify="true"
+          name="contactfrm"
+          id="contactform"
+          onSubmit={handleSubmit}
+        >
           <h2>Contact Form</h2>
           {success && (
             <StyledSuccess>
@@ -167,12 +179,12 @@ const ContactForm = () => {
             <Typeahead
               id="typeahead-country"
               name="country"
-              labelKey="name"
               onChange={setSelected}
               onBlur={handleInput}
               options={countries}
               selected={selected}
               ref={txtRefC}
+              inputProps={{ name: "country", type: "text" }} //This is used for adding props to the actual child textbox of the typeahead div
             />
           </Form.Group>
           <label htmlFor="email">Email</label>
