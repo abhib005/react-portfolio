@@ -26,36 +26,36 @@ const ContactForm = () => {
   const txtRefE = useRef();
   const txtRef = useRef();
 
-  const postFormData = (formdata) => {
-    fetch(
-      "https://react-tutorial-c9f96-default-rtdb.asia-southeast1.firebasedatabase.app/contactinfo.json",
-      {
-        method: "POST",
-        body: JSON.stringify(formdata),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error("Something went wrong");
-        }
-      })
-      .then((responseJson) => {
-        setSuccess("Thanks for contacting! Will reach out to you shortly.");
-        txtRefN.current.value = "";
-        txtRefE.current.value = "";
-        txtRef.current.value = "";
-        txtRefC.current.clear()
-        console.log(responseJson);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // const postFormData = (formdata) => {
+  //   fetch(
+  //     "https://react-tutorial-c9f96-default-rtdb.asia-southeast1.firebasedatabase.app/contactinfo.json",
+  //     {
+  //       method: "POST",
+  //       body: JSON.stringify(formdata),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     }
+  //   )
+  //     .then((response) => {
+  //       if (response.ok) {
+  //         return response.json();
+  //       } else {
+  //         throw new Error("Something went wrong");
+  //       }
+  //     })
+  //     .then((responseJson) => {
+  //       setSuccess("Thanks for contacting! Will reach out to you shortly.");
+  //       txtRefN.current.value = "";
+  //       txtRefE.current.value = "";
+  //       txtRef.current.value = "";
+  //       txtRefC.current.clear()
+  //       console.log(responseJson);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
