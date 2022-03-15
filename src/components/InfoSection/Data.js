@@ -55,7 +55,7 @@ export const homeObjeThree = {
   lightTextDesc: true,
   topLine: "Contact Me",
   headline: `I am open to new opportunities!`,
-  description: `The above information provided was just a gist of things about me and my overall career experience. You can download my updated and detailed resume from the "Download Resume" button.`,
+  description: `The above information provided was just a gist of things about me and my overall career experience. You can download my updated and detailed resume from the "Download Resume" button above or from the hamburger menu ≡ if viewing on mobile.`,
   socioinfo:`Please contact me if you find me a good fit. You can contact me by filling up the contact form or can also contact me on the following platforms, `,
   imgStart: false,
   dark: true,
