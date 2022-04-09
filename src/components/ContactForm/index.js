@@ -59,13 +59,13 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let ipdata = "";
-    try{
-    fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => ipdata = data);
-    }
-    catch(error){
-      console.log("AWS error:"+error);
-    }
+    // let ipdata = "";
+    // try{
+    // fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data));
+    // }
+    // catch(error){
+    //   console.log("AWS error:"+error);
+    // }
     for (let key in state) {
       if (state[key] === "") {
         setError(`You must provide the ${key}`);
@@ -76,7 +76,7 @@ const ContactForm = () => {
     e.preventDefault();
     let myForm = document.getElementById("contactform");
     let formData = new FormData(myForm);
-    formData.append(ipdata);
+    // formData.append(ipdata);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
