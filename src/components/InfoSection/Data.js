@@ -10,7 +10,7 @@ export const homeObjeOne = {
   lightText: true,
   lightTextDesc: true,
   topLine: "About Me",
-  description: `I am a technology inspired individual with a knack of trying new things.
+  description: `I am a technology-inspired individual with a knack of trying new things.
 
   An experienced Web Developer with 3+ years of full time experience in developing solutions and products for one of the most valued IT services company.
 
